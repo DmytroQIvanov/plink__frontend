@@ -1,10 +1,16 @@
 .goods-page
-    .goods-page__arrow-img
-        background-color: red
-        width: 10px
-        height: 10px
-        display: flex
-
-        &::before
-
+    .goods-page__arrow-img.UP
+        // color: red
+        &::after
+            position: absolute
+            margin-left: 6px
+            margin-top: 2px
             content: url('./assets/arrow-down.svg')
+            z-index: 10
+
+    .goods-page__arrow-img.DOWN
+        &::after
+            position: absolute
+            margin-left: 6px
+            margin-top: 2px
+            content: url('./assets/arrow-up.svg')

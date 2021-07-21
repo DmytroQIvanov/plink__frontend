@@ -7,6 +7,7 @@ import { toOrderItem } from "../../Store/orderSlice";
 export const ItemComponent =(props:{Item:IItem})=>{
     const {Item} = props;
   const dispatch = useDispatch()
+  console.log('alert')
 
 
     return(

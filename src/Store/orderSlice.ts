@@ -15,19 +15,25 @@ const orderSlice = createSlice({
         address:'',
         },
         ordered:false,
-        goods:<IItem[]>[
-            {Product:`Lenovo IC-512`,SKU:`ZC11501`,RAM:4,HDD:512,Price:550,},
-        {Product:`HP Megabook 14`,SKU:`ZC12001`,RAM:2,HDD:240,Price:420,},
-        {Product:`Lenovo IC-520`,SKU:`ZC22004`,RAM:8,HDD:1024,Price:600,},
-        {Product:`Asus ThinkPad 15-1554`,SKU:`ZC15030`,RAM:16,HDD:1024,Price:700,},
-        {Product:`Asus ThinkPad 14-254`,SKU:`ZX5467`,RAM:8,HDD:240,Price:520,},
-        {Product:`HP Elitebook 15`,SKU:`ZXC5460`,RAM:12,HDD:515,Price:889,}
-        ],
+        goods:<IItem[]>[],
         orderedItem:<IItem>{},
         loading:false,
 
     },
     reducers:{
+        getGoodsStart(state){
+            state.loading=true
+
+        },
+        getGoodsSuccess(state,action){
+            state.goods = action.payload
+            state.loading=false
+
+        },
+        getGoodsError(state,action){
+            state.loading=false
+
+        },
         toOrderItem(state,action){
             state.orderedItem=action.payload
         },
@@ -38,6 +44,6 @@ const orderSlice = createSlice({
     }
 })
 
-export const { toOrder,toOrderItem } = orderSlice.actions
+export const { toOrder,toOrderItem, getGoodsStart,getGoodsError,getGoodsSuccess } = orderSlice.actions
 
 export default orderSlice.reducer
