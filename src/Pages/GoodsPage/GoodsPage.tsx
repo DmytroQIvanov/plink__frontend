@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ItemComponent } from "../../Components/Item/ItemComponent";
+import { Loader } from "../../Components/Loader/Loader";
 import { IItem } from "../../Interfaces/IItem";
 import { IOrderSlice } from "../../Interfaces/IOrderSlice";
 import { getGoodsStart } from "../../Store/orderSlice";
@@ -55,17 +56,11 @@ const Goods = () => {
   };
 
   const arrow = `goods-page__arrow-img ${SortDataDirection ? "UP" : "DOWN"}`;
-  
+
+  if (loading) return <Loader />;
+
   return (
-    <div className="goods-page">
-      {loading && (
-        <div
-          className="spinner-grow position-absolute top-1 end-0"
-          role="status"
-        >
-          <span className="visually-hidden">Loading...</span>
-        </div>
-      )}
+    <main className="goods-page">
       <table className="table table-hover">
         <thead>
           <tr>
@@ -122,7 +117,7 @@ const Goods = () => {
           ))}
         </tbody>
       </table>
-    </div>
+    </main>
   );
 };
 

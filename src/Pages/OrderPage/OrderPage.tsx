@@ -24,7 +24,6 @@ const OrderPage = () => {
     address: "",
   });
 
-  const count = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const onHandleFunction = (elem: any) => {

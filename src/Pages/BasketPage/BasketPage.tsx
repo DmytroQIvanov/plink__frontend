@@ -16,7 +16,7 @@ const BasketPage = () => {
     return <Redirect to="/products" />;
   }
   return (
-    <div className="backet-page">
+    <main className="backet-page">
       <div className="backet-page__container">
         <header>
           <h1 className="">Product info</h1>
@@ -67,7 +67,7 @@ const BasketPage = () => {
           <div>{orderData.email}</div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
