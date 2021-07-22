@@ -6,11 +6,7 @@ import { requestGetGoods } from "../requests/goods";
 export function* handleGetGoods() {
   try {
 
-    // yield put(getGoodsStart());
-    console.log("response")
-
     const response:IItem[] = yield call(requestGetGoods);
-    console.log(response)
     yield put(getGoodsSuccess(response))
 
 

@@ -1,7 +1,16 @@
 .goods-page
+    th
+        cursor: pointer
+        transition-duration: .3s
+        -moz-user-select: none
+        -khtml-user-select: none
+        user-select: none
+        &:hover
+            transform: scale(1.2)
+
     .goods-page__arrow-img.UP
-        // color: red
         &::after
+
             position: absolute
             margin-left: 6px
             margin-top: 2px
