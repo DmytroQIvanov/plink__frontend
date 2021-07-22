@@ -1,14 +1,15 @@
 ## For start
-### npm i
-### npm start
+### `npm i`
+### `npm start`
 
 # Tech stack
-## Typescript
-### Redux-toolkit, Redux-saga
-### Sass
-### Axios
+## `Typescript`
+### `Redux-toolkit`, `Redux-saga`
+### `Sass`
+### `Axios`
+### `Bootstrap`
 
-Hosting: Firebase
+Hosting: `Firebase`
 
 Production:  https://plink-21fe1.firebaseapp.com
 
